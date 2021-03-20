@@ -1,0 +1,48 @@
+@host1 = http://localhost:8080/
+@host = http://localhost:8080/people
+
+#this will provide the first glimpse of what this server has to offer is 
+#options availabe such as ?page, ?size, ?sort
+# GET {{host1}} HTTP/1.1
+
+
+#how to see peoples records
+# GET {{host}} HTTP/1.1
+
+# #add a record
+# POST {{host}} HTTP/1.1
+# Content-type: application/json
+
+# {
+#     "firstName" : "Frodo", 
+#     "lastName" : "Baggins" 
+# }
+    
+    # search a specific record by name 
+# GET {{host}}/search/findByLastName?name=Baggins HTTP/1.1
+
+#get a specific record ie id=1
+# GET {{host}}/1 HTTP/1.1
+
+#PUT replaces an entire record. Fields not supplied are replaced with null
+# PUT {{host}}/1 HTTP/1.1
+# Content-type: application/json
+
+# {
+#     "firstName":"Freddy",
+#     "lastName" : "Beggins"
+
+# }
+
+
+#PATCH updates a subset of items
+# PATCH {{host}}/1 HTTP/1.1
+# Content-tyype: application/json
+
+# {
+#     "firstName" : "Fredrick Erick"
+# }
+
+
+#delete a record ie id=4
+# DELETE {{host}}/4 HTTP/1.1
