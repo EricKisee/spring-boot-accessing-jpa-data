@@ -10,13 +10,13 @@
 # GET {{host}} HTTP/1.1
 
 # #add a record
-# POST {{host}} HTTP/1.1
-# Content-type: application/json
+POST {{host}} HTTP/1.1
+Content-type: application/json
 
-# {
-#     "firstName" : "Frodo", 
-#     "lastName" : "Baggins" 
-# }
+{
+    "firstName" : "Frodo", 
+    "lastName" : "Baggins" 
+}
     
     # search a specific record by name 
 # GET {{host}}/search/findByLastName?name=Baggins HTTP/1.1
