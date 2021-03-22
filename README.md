@@ -73,3 +73,5 @@ Updating a specific record: run PUT or PATCH calls at
 Deleting a specific record: run a DELETE call at
 
     http://localhost:8080/people/{id}
+
+If you are using Rest Client for vs code you can run the commands from the [app.http](https://github.com/EricKisee/spring-boot-accessing-jpa-data/blob/master/src/main/resources/static/app.http) file.
